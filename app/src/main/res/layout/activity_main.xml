@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/accept" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Severity Detector"
+            android:textColor="#3F51B5"
+            android:textSize="23dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:hint="Enter text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/butt_sub"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="40dp"
+        android:text="Detect"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewGraph"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!--Pie chart to display the data-->
+
+            <org.eazegraph.lib.charts.PieChart
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/piechart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="6dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical">
+
+                    <!--View to display the yellow color icon-->
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Personal"/>
+
+                    <!--Text view to display R -->
+                    <TextView
+                        android:id="@+id/tvPersonal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Personal"
+                        android:textSize="13sp"
+                        android:paddingLeft="10dp"/>
+
+                </LinearLayout>
+
+                <!--Linear layout to display Python-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+
+                    <!--View to display the green color icon-->
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Political"/>
+
+                    <!--Text view to display python text -->
+                    <TextView
+                        android:id="@+id/tvPolitical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Political"
+                        android:textSize="13sp"
+                        android:paddingLeft="10dp"/>
+
+                </LinearLayout>
+
+                <!--Linear layout to display C++-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+
+                    <!--View to display the red color icon-->
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Religious"/>
+
+                    <!--Text view to display C++ text -->
+                    <TextView
+                        android:id="@+id/tvReligious"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Religious"
+                        android:textSize="13sp"
+                        android:paddingLeft="10dp"/>
+
+                </LinearLayout>
+
+                <!--Linear layout to display Java-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+
+                    <!--View to display the blue color icon-->
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Geopolitical"/>
+
+                    <!--Text view to display Java text -->
+                    <TextView
+                        android:id="@+id/tvGeopolitical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Geopolitical"
+                        android:textSize="13sp"
+                        android:paddingLeft="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewGraph2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!--Pie chart to display the data-->
+
+            <org.eazegraph.lib.charts.PieChart
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/piechart2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="6dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical">
+
+                    <!--View to display the yellow color icon-->
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Personal"/>
+
+                    <!--Text view to display R -->
+                    <TextView
+                        android:id="@+id/tvLess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Less Alarming"
+                        android:textSize="13sp"
+                        android:paddingLeft="10dp"/>
+
+                </LinearLayout>
+
+                <!--Linear layout to display Python-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+
+                    <!--View to display the green color icon-->
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Political"/>
+
+                    <!--Text view to display python text -->
+                    <TextView
+                        android:id="@+id/tvAlarming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alarming"
+                        android:textSize="13sp"
+                        android:paddingLeft="10dp"/>
+
+                </LinearLayout>
+
+                <!--Linear layout to display C++-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+
+                    <!--View to display the red color icon-->
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Religious"/>
+
+                    <!--Text view to display C++ text -->
+                    <TextView
+                        android:id="@+id/tvVery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Very Alarming"
+                        android:textSize="13sp"
+                        android:paddingLeft="10dp"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
